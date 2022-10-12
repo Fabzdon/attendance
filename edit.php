@@ -69,7 +69,10 @@ $title = "Edit Record" ;
 
     <div class ="d-grid gap-2 col-6 mx-auto">
 
-    <button  type="submit" name = "submit" class="btn btn-success btn-lg">Save Changes</button>
+    <a  href = "viewrecords.php" type="submit" name = "submit" class="btn btn-success btn">Back to List</a>
+
+
+    <button  type="submit" name = "submit" class="btn btn-success btn">Save Changes</button>
 
 </div>
 <?php }?>
