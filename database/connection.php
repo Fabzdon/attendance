@@ -1,13 +1,21 @@
 <?php
 
-$host = '127.0.0.1';
-$db = 'attendance_db';
-$username = 'root';
-$password = '';
-$charset = 'utf8mb4';
+//  $host = '127.0.0.1';
+//  $db = 'attendance_db';
+//  $username = 'root';
+//  $password = '';
+//  $charset = 'utf8mb4';
 
 
-$dsn = "mysql:host = $host; dbname=$db; charset = $charset";
+//Remote Database COnnection 
+ $host = 'remotemysql.com';
+ $db = '0SKxi8ZUXz';
+ $username = '0SKxi8ZUXz';
+ $password = 'yKr57EPCsN';
+ $charset = 'utf8mb4';
+
+
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
 try
 {
