@@ -5,6 +5,7 @@ require_once "includes/header.php";
 require_once "database/crud.php";
 require_once "database/connection.php";
 require_once "includes/footer.php";
+require_once 'includes/auth_check.php';
 
 if(!isset($_GET['id'])){
     echo "<h1 class = 'text-danger'>An error occurred please try again</h1>";

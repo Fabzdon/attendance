@@ -1,18 +1,18 @@
 <?php
 
-//  $host = '127.0.0.1';
-//  $db = 'attendance_db';
-//  $username = 'root';
-//  $password = '';
-//  $charset = 'utf8mb4';
+  $host = '127.0.0.1';
+  $db = 'attendance_db';
+  $username = 'root';
+  $password = '';
+  $charset = 'utf8mb4';
 
 
 //Remote Database COnnection 
- $host = 'remotemysql.com';
- $db = '0SKxi8ZUXz';
- $username = '0SKxi8ZUXz';
- $password = 'yKr57EPCsN';
- $charset = 'utf8mb4';
+//  $host = 'remotemysql.com';
+//  $db = '0SKxi8ZUXz';
+//  $username = '0SKxi8ZUXz';
+//  $password = 'yKr57EPCsN';
+//  $charset = 'utf8mb4';
 
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -37,5 +37,9 @@ catch(PDOException $e)
 
 
 require_once 'crud.php';
+require_once 'user.php';
+$user = new user($pdo);
 $crud = new crud($pdo);
+
+$user->insertUser("admin", "password");
 ?>
