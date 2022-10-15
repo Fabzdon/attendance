@@ -5,6 +5,7 @@ require_once "includes/header.php";
 require_once "database/crud.php";
 require_once "database/connection.php";
 require_once 'includes/auth_check.php';
+require_once 'sendemail.php';
 
 ?>
 
@@ -54,14 +55,18 @@ require_once 'includes/auth_check.php';
 
      
       $isSuccess = $crud->insert($fname, $lname, $dob, $email, $contact, $specialty);
+      $specialtyName = $crud->getSpecialtiesById($specialty);
 
       //echo $fname;
       
 
       if ($isSuccess)
       {
+        $subject = "Welcome to I.t Conference 2019";
+        $content = "You have successfully registered for this year\'s IT Conference";
+        SendEmail::SendMail($email,'Welcome to the I.T Conference',"yes");
 
-        echo "<h1 class = 'text-center text-success'> You Have Been Registered </h1>";
+        include 'includes/successmessage.php';;
 
 
       }
@@ -81,6 +86,8 @@ require_once 'includes/auth_check.php';
   <div class="card-body">
     <h5 class="card-title"> <?php echo $_POST["firstname"] . ' ' . $_POST["lastname"]  ?></h5>
     <h6 class="card-subtitle mb-2 text-muted"> <?php echo $_POST["email"] ?></h6>
+    <h6 class="card-subtitle mb-2 text-muted"> <?php echo $specialtyName['name'] ?></h6>
+
     <a > <?php echo $_POST["datepicker"] ?> </a>
   </br>
     <a > <?php echo $_POST["contactnum"] ?> </a>
