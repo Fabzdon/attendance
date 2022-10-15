@@ -8,7 +8,7 @@ require 'vendor/autoload.php';
 
 class SendEmail{
     public static function SendMail($to,$subject,$content){
-    $key = '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';
+    $key = '';
 
  
 
