@@ -42,6 +42,13 @@ require_once 'sendemail.php';
       $contact = $_POST["contactnum"];
       $specialty = $_POST["specialty"];
 
+      $orig_file = $_FILES["avatar"]["tmp_name"];
+      $ext  = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+      $target_dir = 'uploads/';
+      $destination = "$target_dir$contact.$ext";
+      move_uploaded_file($orig_file,$destination);
+
+      
      //  echo $_POST["lastname"];
      // echo $_POST["firstname"];
     //  echo $dob = $_POST["datepicker"];
@@ -54,7 +61,7 @@ require_once 'sendemail.php';
       
 
      
-      $isSuccess = $crud->insert($fname, $lname, $dob, $email, $contact, $specialty);
+      $isSuccess = $crud->insert($fname, $lname, $dob, $email, $contact, $specialty, $destination);
       $specialtyName = $crud->getSpecialtiesById($specialty);
 
       //echo $fname;
@@ -64,7 +71,7 @@ require_once 'sendemail.php';
       {
         $subject = "Welcome to I.t Conference 2019";
         $content = "You have successfully registered for this year\'s IT Conference";
-        SendEmail::SendMail($email,'Welcome to the I.T Conference',"yes");
+        SendEmail::SendMail($email,'yes',"yes");
 
         include 'includes/successmessage.php';;
 
@@ -81,8 +88,8 @@ require_once 'sendemail.php';
 
     ?>
     
-
-     <div class="card" style="width: 18rem;">
+  <img src="<?php echo $destination?>"  class = "rounded-circle" style = "width : 15%, height : 15%" />
+   <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"> <?php echo $_POST["firstname"] . ' ' . $_POST["lastname"]  ?></h5>
     <h6 class="card-subtitle mb-2 text-muted"> <?php echo $_POST["email"] ?></h6>

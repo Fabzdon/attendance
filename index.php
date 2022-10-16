@@ -9,9 +9,9 @@ $title = "Homepage" ;
 
  ?>
 
-<h1 class="text-center">Registration for I.T Certification</h1>
+<h1 class="text-center" >Registration for I.T Certification</h1>
 
-<form method = "post" action = "success.php">
+<form method = "post" enctype="multipart/form-data" action = "success.php">
 
     <div class="mb-3">
         <label for="firstname" class="form-label">First Name</label>
@@ -46,17 +46,22 @@ $title = "Homepage" ;
 
     <div class="mb-3">
         <label name = "contactnum" for="contactnum" class="form-label">Contact Number</label>
-        <input type="text" name="contactnum" class="form-control" id="contactnum" aria-describedby="phoneHelp">
+        <input  type="text" name="contactnum" class="form-control" id="contactnum" aria-describedby="phoneHelp">
         <div id="phoneHelp" class="form-text">We'll never share your number with anyone else.</div>
     </div>
 
-    <div class ="d-grid gap-2 col-6 mx-auto">
+    <div class="custom-file">
+  <label  class = "custom-file-label" id = "avatar" name = "avatar" class="form-label">Choose Profile Picture</label>
+  <input type = "file" accept="image/*" class="custom-file-input"  id="avatar" name = "avatar">
+  <div id="phoneHelp" class="form-text">This is optional</div>
+</div>
 
+<br/>
+   
+
+    <div class ="d-grid gap-2 col-6 mx-auto">
     <button  type="submit" name = "submit" class="btn btn-primary btn-lg">Submit</button>
     <button  type="back" href =  "viewrecords.php" name = "back" class="btn btn-primary btn-lg">Back to View</button>
-    
-
-
 </div>
 
 <?php require_once 'includes/footer.php';?>

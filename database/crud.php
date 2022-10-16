@@ -15,13 +15,13 @@ class crud
 
   }
 
-  public function insert ($fname, $lname, $dob, $email, $contactnum, $specialty)
+  public function insert ($fname, $lname, $dob, $email, $contactnum, $specialty, $avatar_path)
   {
     
 
     try
     {
-        $sql = "INSERT INTO attendance (firstname, lastname, dateofbirth, email, contactnum, specialty_id) VALUES (:fname, :lname, :dob, :email, :contactnum, :specialty_id)";
+        $sql = "INSERT INTO attendance (firstname, lastname, dateofbirth, email, contactnum, specialty_id, avatar_path) VALUES (:fname, :lname, :dob, :email, :contactnum, :specialty_id, :avatar_path)";
         $statement = $this->database->prepare($sql);
 
         $statement->bindparam(':fname', $fname);
@@ -30,6 +30,8 @@ class crud
         $statement->bindparam(':email', $email);
         $statement->bindparam(':contactnum', $contactnum);
         $statement->bindparam(':specialty_id', $specialty);
+        $statement->bindparam(':avatar_path', $avatar_path);
+
 
 
         $statement->execute();
