@@ -2,7 +2,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <div class = "container">
     <h1><?php echo $title ?></h1>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +27,7 @@
   
 
   </script>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="index.php">IT Conference</a>
   
@@ -41,6 +41,8 @@
       </li>
     </ul>
   </div>
+  
+
 
 
   <div>
@@ -67,13 +69,17 @@
         <?php } ?>
       </li>
     </ul>
-  </div>
+  
+ 
+    
+ 
 
   
 </nav>
 </br>
   </head>
   <body>
+  <div class = "container"> 
  
     
 
