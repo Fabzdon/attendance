@@ -13,15 +13,9 @@ class user
 
   }
 
-
-  
-
-  
-
   public function insertUser ($username, $password)
   {
     
-
     try
     {
         $result = $this->getUSerByUsername($username);
@@ -93,7 +87,6 @@ public function getAttendeeDetails($username, $password)
         
         }
 }
-
 
 }
 

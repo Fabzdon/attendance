@@ -2,9 +2,7 @@
 $title = "view record";
 
 require_once "includes/header.php";
-require_once "database/crud.php";
-require_once "database/connection.php";
-require_once "includes/footer.php";
+
 require_once 'includes/auth_check.php';
 
 if(!isset($_GET['id'])){
@@ -21,7 +19,7 @@ else
 
 
 ?>
- <img src="<?php echo empty($result['avatar_path']) ? "uplaods/banner.jpg.png" : $result['avatar_path'];?>"  class = "rounded-circle" style = "width : 15%, height : 15%" />
+ <img src="<?php echo empty($result['avatar_path']) ? "uplaods/banner.jpg.png" : $result['avatar_path'];?>"  class = "rounded-circle" style = "width : 25%, height : 25%" />
 <div class="card" style="width: 18rem;">
 <div class="card-body">
 <p class="card-text"><?php echo $result["id"] ?></p>
@@ -41,3 +39,4 @@ else
     <td> <a href = "edit.php?id=<?php echo $result['id'] ?>" class = "btn btn-warning">Edit </a></td>
     <td> <a onclick = "return confirm('Delete this record?')"href = "deleterecord.php?id=<?php echo $result['id'] ?>" class = "btn btn-danger">Delete </a></td>
 <?php }?>
+<?php require_once "includes/footer.php"; ?>

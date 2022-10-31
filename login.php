@@ -1,9 +1,7 @@
 <?php 
 $title = "User Login" ;
  require_once 'includes/header.php'; 
- require_once 'database/connection.php';
- require_once 'database/crud.php';
- require_once 'includes/footer.php';
+
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $username = strtolower(trim($_POST['username']));
@@ -53,5 +51,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
 
-
+<?php  require_once 'includes/footer.php';?>
 </form>
