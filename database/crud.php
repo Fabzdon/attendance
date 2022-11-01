@@ -21,7 +21,7 @@ class crud
 
     try
     {
-        $sql = "INSERT INTO attendee_fabian_gordon (firstname, lastname, dateofbirth, email, contactnum, specialty_id, avatar_path) VALUES (:fname, :lname, :dob, :email, :contactnum, :specialty_id, :avatar_path)";
+        $sql = "INSERT INTO attendance (firstname, lastname, dateofbirth, email, contactnum, specialty_id, avatar_path) VALUES (:fname, :lname, :dob, :email, :contactnum, :specialty_id, :avatar_path)";
         $statement = $this->database->prepare($sql);
 
         $statement->bindparam(':fname', $fname);
@@ -88,7 +88,7 @@ class crud
   public function getAttendeeDetails($id)
   {
     try{
-    $sql = "select * from attendee_fabian_gordon a inner join specialties s on a.specialty_id = s.specialty_id where id = :id";
+    $sql = "select * from attendance a inner join specialties s on a.specialty_id = s.specialty_id where id = :id";
     $stmt = $this->database->prepare($sql);
     $stmt->bindparam(':id',$id);
      $stmt->execute();
