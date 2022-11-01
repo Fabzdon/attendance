@@ -108,7 +108,7 @@ class crud
 
     try{
 
-    $sql = "delete from attendee_fabian_gordon where id = :id";
+    $sql = "delete from attendance where id = :id";
     $stmt = $this->database->prepare($sql);
     $stmt->bindparam(':id',$id);
     $stmt->execute();
@@ -126,7 +126,7 @@ class crud
   public function editAttendee($id, $fname, $lname, $dob, $email, $contactnum, $specialty){
 
     try{
-      $sql = "UPDATE `attendee_fabian_gordon` SET `firstname`= :fname,`lastname`=:lname,`dateofbirth`=
+      $sql = "UPDATE `attendance` SET `firstname`= :fname,`lastname`=:lname,`dateofbirth`=
       :dob,`email`= :email,`contactnum`= :contactnum,`specialty_id`= :specialty_id WHERE id = :id ";
 
        $statement = $this->database->prepare($sql);
