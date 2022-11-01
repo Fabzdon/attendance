@@ -21,7 +21,7 @@ class crud
 
     try
     {
-        $sql = "INSERT INTO attendance (firstname, lastname, dateofbirth, email, contactnum, specialty_id, avatar_path) VALUES (:fname, :lname, :dob, :email, :contactnum, :specialty_id, :avatar_path)";
+        $sql = "INSERT INTO attendee_fabian (firstname, lastname, dateofbirth, email, contactnum, specialty_id, avatar_path) VALUES (:fname, :lname, :dob, :email, :contactnum, :specialty_id, :avatar_path)";
         $statement = $this->database->prepare($sql);
 
         $statement->bindparam(':fname', $fname);
@@ -58,7 +58,7 @@ class crud
 
   public function getAttendees(){
     try{
-    $sql = "SELECT * FROM `attendance` a inner join specialties s on a.specialty_id = s.specialty_id";
+    $sql = "SELECT * FROM `attendee_fabian` a inner join specialties s on a.specialty_id = s.specialty_id";
     $result = $this->database->query($sql);
     return $result;
   }
@@ -88,7 +88,7 @@ class crud
   public function getAttendeeDetails($id)
   {
     try{
-    $sql = "select * from attendance a inner join specialties s on a.specialty_id = s.specialty_id where id = :id";
+    $sql = "select * from attendee_fabian a inner join specialties s on a.specialty_id = s.specialty_id where id = :id";
     $stmt = $this->database->prepare($sql);
     $stmt->bindparam(':id',$id);
      $stmt->execute();
@@ -108,7 +108,7 @@ class crud
 
     try{
 
-    $sql = "delete from attendance where id = :id";
+    $sql = "delete from attendee_fabian where id = :id";
     $stmt = $this->database->prepare($sql);
     $stmt->bindparam(':id',$id);
     $stmt->execute();
@@ -126,7 +126,7 @@ class crud
   public function editAttendee($id, $fname, $lname, $dob, $email, $contactnum, $specialty){
 
     try{
-      $sql = "UPDATE `attendance` SET `firstname`= :fname,`lastname`=:lname,`dateofbirth`=
+      $sql = "UPDATE `attendee_fabian` SET `firstname`= :fname,`lastname`=:lname,`dateofbirth`=
       :dob,`email`= :email,`contactnum`= :contactnum,`specialty_id`= :specialty_id WHERE id = :id ";
 
        $statement = $this->database->prepare($sql);
