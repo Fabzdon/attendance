@@ -8,10 +8,10 @@
 
 
 ////Remote Database COnnection 
-  $host = 'remotemysql.com';
-   $db = '0SKxi8ZUXz';
-   $username = '0SKxi8ZUXz';
-   $password = 'yKr57EPCsN';
+  $host ='applied-web.mysql.database.azure.com';
+   $db = 'attendee_fabian';
+   $username ='appliedweb_user@applied-web';
+   $password='P@ssword1';
    $charset = 'utf8mb4';
 
 
