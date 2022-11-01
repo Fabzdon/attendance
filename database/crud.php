@@ -58,7 +58,7 @@ class crud
 
   public function getAttendees(){
     try{
-    $sql = "SELECT * FROM `attendee_fabian_gordon` a inner join specialties s on a.specialty_id = s.specialty_id";
+    $sql = "SELECT * FROM `attendance` a inner join specialties s on a.specialty_id = s.specialty_id";
     $result = $this->database->query($sql);
     return $result;
   }
