@@ -19,7 +19,7 @@ else
 
 
 ?>
- <img src="<?php echo empty($result['avatar_path']) ? "uplaods/banner.jpg.png" : $result['avatar_path'];?>"  class = "rounded-circle" style = "width : 25%, height : 25%" />
+ <img src="<?php echo empty($result['avatar_path']) ? "uplaods/banner.jpg.png" : $result['avatar_path'];?>"  class = "rounded-circle" style = "width : 12%; height : 12%;  " />
 <div class="card" style="width: 18rem;">
 <div class="card-body">
 <p class="card-text"><?php echo $result["id"] ?></p>

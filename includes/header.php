@@ -29,25 +29,28 @@ require_once "database/connection.php";?>
       });
     });
   </script>
+  <style>
+    
+  </style>
 
-  <nav class="navbar navbar-expand-lg navbar-dark  bg-primary fixed">
-    <a class="navbar-brand" href="index.php">IT Conference</a>
+  <nav class=" fixed-top navbar navbar-expand-lg navbar-dark  bg-primary ">
+    <a class="navbar-brand " href="index.php">IT Conference</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
+    <div class=" collapse navbar-collapse" id="navbarNav" >
+      <ul class="navbar-nav mr-auto ">
         <a class="nav-link" href="index.php">Home <span class="sr-only"></span></a>
         <a class="nav-link" href="viewrecords.php">View Attendees <span class="sr-only"></span></a>
         </li>
       </ul>
     </div>
-
     <div>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <?php
+          
 
           if (!isset($_SESSION['userid'])) {
 
@@ -69,6 +72,8 @@ require_once "database/connection.php";?>
 
   </nav>
   </br>
+<br>
+ 
 
 
 <body>

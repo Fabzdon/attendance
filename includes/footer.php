@@ -1,7 +1,7 @@
 
 
     <div id = 'footer'>
-      <div id = "footer" class = "p-3 mb-2 bg-primary text-white fixed-bottom">
+      <div id = "footer" class = "p-3 mb-0 bg-primary text-white fixed-bottom">
         
       
     <?php echo 'Developed by Fabz Don ' . ' ' . date("m") . '/' . date("y"); ?>

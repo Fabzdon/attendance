@@ -56,7 +56,7 @@ require_once 'sendemail.php';
 
     ?>
     
-  <img src="<?php echo $destination?>"  class = "rounded-circle" style = "width : 15%, height : 15%" />
+  <img src="<?php echo $destination?>"  class = "rounded-circle" style = "width : 12%; height : 12%" />
    <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"> <?php echo $_POST["firstname"] . ' ' . $_POST["lastname"]  ?></h5>
