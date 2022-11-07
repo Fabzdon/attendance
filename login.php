@@ -29,25 +29,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
  ?>
 
- <h1 class = "text-center"> <?php echo $title ?> </h1>
+<h1 class="text-center"> <?php echo $title ?> </h1>
 
 <br>
 <br>
 
- <form action = "<?php echo htmlentities($_SERVER['PHP_SELF']); ?> " method = "post" class="row g-3">
- <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Username</label>
-    <input type="text" name = "username" class="form-control" id="inputPassword2" placeholder="Username" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_POST['username'] ?>">
-  </div>
-  <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Password</label>
-    <input name = "password" type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <div class="col-auto">
-    <button type="submit" class="btn btn-primary btn-block mb-3">Login</button>
-    <button type="submit" class="btn btn-primary btn-block mb-3">Forgot Password</button>
+<form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?> " method="post" class="row g-3">
+    <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Username</label>
+        <input type="text" name="username" class="form-control" id="inputPassword2" placeholder="Username"
+            value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_POST['username'] ?>">
+    </div>
+    <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Password</label>
+        <input name="password" type="password" class="form-control" id="inputPassword2" placeholder="Password">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary btn-block mb-3">Login</button>
+        <button type="submit" class="btn btn-primary btn-block mb-3">Forgot Password</button>
 
-  </div>
+    </div>
 </form>
 
 

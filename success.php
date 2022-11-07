@@ -6,7 +6,7 @@ require_once 'sendemail.php';
 
 ?>
 
-<h1 > Registration was successful. </h1>
+<h1> Registration was successful. </h1>
 
 
 <?php 
@@ -53,21 +53,21 @@ require_once 'sendemail.php';
 
 
     ?>
-    
-  <img src="<?php echo $destination?>"  class = "rounded-circle" style = "width : 12%; height : 12%" />
-   <div class="card" style="width: 18rem;">
-     <div class="card-body">
-      <h5 class="card-title"> <?php echo $_POST["firstname"] . ' ' . $_POST["lastname"];  ?></h5>
-      <h6 class="card-subtitle mb-2 text-muted"> <?php echo $_POST["email"]; ?></h6>
-       <h6 class="card-subtitle mb-2 text-muted"> <?php echo $specialtyName['name']; ?></h6>
 
-    <a> <?php echo $_POST["datepicker"]; ?> </a>
-  </br>
-    <a > <?php echo $_POST["contactnum"]; ?> </a>
+<img src="<?php echo $destination?>" class="rounded-circle" style="width : 12%; height : 12%" />
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"> <?php echo $_POST["firstname"] . ' ' . $_POST["lastname"];  ?></h5>
+        <h6 class="card-subtitle mb-2 text-muted"> <?php echo $_POST["email"]; ?></h6>
+        <h6 class="card-subtitle mb-2 text-muted"> <?php echo $specialtyName['name']; ?></h6>
 
-  
-    
-  </div> 
+        <a> <?php echo $_POST["datepicker"]; ?> </a>
+        </br>
+        <a> <?php echo $_POST["contactnum"]; ?> </a>
+
+
+
+    </div>
 </div>
 
 
@@ -82,5 +82,3 @@ require_once 'sendemail.php';
 <?php
 require_once "includes/footer.php"; 
 ?>
-
-
