@@ -2,8 +2,6 @@
 
 $title = "Success!!!";
 require_once "includes/header.php";
-
-
 require_once 'sendemail.php';
 
 ?>
@@ -38,10 +36,9 @@ require_once 'sendemail.php';
 
       if ($isSuccess)
       {
-        $subject = "Welcome to I.t Conference 2019";
+        $subject = "Welcome to I.t Conference 2022";
         $content = "You have successfully registered for this year\'s IT Conference";
-        SendEmail::SendMail($email,'yes',"yes");
-
+        SendEmail::SendMail($email,'Welcome to I.T Conference 2022','You have successfully registered for this year I.t Conference');
         include 'includes/successmessage.php';;
 
 
@@ -59,14 +56,14 @@ require_once 'sendemail.php';
     
   <img src="<?php echo $destination?>"  class = "rounded-circle" style = "width : 12%; height : 12%" />
    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title"> <?php echo $_POST["firstname"] . ' ' . $_POST["lastname"]  ?></h5>
-    <h6 class="card-subtitle mb-2 text-muted"> <?php echo $_POST["email"] ?></h6>
-    <h6 class="card-subtitle mb-2 text-muted"> <?php echo $specialtyName['name'] ?></h6>
+     <div class="card-body">
+      <h5 class="card-title"> <?php echo $_POST["firstname"] . ' ' . $_POST["lastname"];  ?></h5>
+      <h6 class="card-subtitle mb-2 text-muted"> <?php echo $_POST["email"]; ?></h6>
+       <h6 class="card-subtitle mb-2 text-muted"> <?php echo $specialtyName['name']; ?></h6>
 
-    <a > <?php echo $_POST["datepicker"] ?> </a>
+    <a> <?php echo $_POST["datepicker"]; ?> </a>
   </br>
-    <a > <?php echo $_POST["contactnum"] ?> </a>
+    <a > <?php echo $_POST["contactnum"]; ?> </a>
 
   
     

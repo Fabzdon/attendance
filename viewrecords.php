@@ -36,15 +36,15 @@ $results = $crud->getAttendees();
 
 
 <tr>
-    <td> <?php echo $r['id'] ?></td>
-    <td> <?php echo $r['firstname'] ?></td>
-    <td> <?php echo $r['lastname'] ?></td>
-    <td> <?php echo $r['dateofbirth'] ?></td>
-    <td> <?php echo $r['email'] ?></td>
-    <td> <?php echo $r['contactnum'] ?></td>
-    <td> <?php echo $r['name'] ?></td>
-    <td> <a href = "view.php?id=<?php echo $r['id'] ?>" class = "btn btn-primary">View </a></td>
-    <td> <a href = "edit.php?id=<?php echo $r['id'] ?>" class = "btn btn-warning">Edit </a></td>
+    <td> <?php echo $r['id']; ?></td>
+    <td> <?php echo $r['firstname']; ?></td>
+    <td> <?php echo $r['lastname']; ?></td>
+    <td> <?php echo $r['dateofbirth']; ?></td>
+    <td> <?php echo $r['email']; ?></td>
+    <td> <?php echo $r['contactnum']; ?></td>
+    <td> <?php echo $r['name']; ?></td>
+    <td> <a href = "view.php?id=<?php echo $r['id']; ?>" class = "btn btn-primary">View </a></td>
+    <td> <a href = "edit.php?id=<?php echo $r['id']; ?>" class = "btn btn-warning">Edit </a></td>
     <td> <a onclick = "return confirm('Delete this record?')"href = "deleterecord.php?id=<?php echo $r['id'] ?>" class = "btn btn-danger">Delete </a></td>
 
 
