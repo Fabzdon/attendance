@@ -18,7 +18,8 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   
   <script>
-  $( function() {
+  $( function() 
+  {
     $( "#datepicker" ).datepicker();
   } );
   </script>

@@ -5,7 +5,8 @@ require_once "includes/header.php";
 
 require_once 'includes/auth_check.php';
 
-if(!isset($_GET['id'])){
+if(!isset($_GET['id']))
+{
     echo "<h1 class = 'text-danger'>An error occurred please try again</h1>";
   
 
@@ -38,5 +39,7 @@ else
 <td> <a href = "viewrecords.php"  class = "btn btn-info">Back to list </a></td>
     <td> <a href = "edit.php?id=<?php echo $result['id'] ?>" class = "btn btn-warning">Edit </a></td>
     <td> <a onclick = "return confirm('Delete this record?')"href = "deleterecord.php?id=<?php echo $result['id'] ?>" class = "btn btn-danger">Delete </a></td>
+    
 <?php }?>
+
 <?php require_once "includes/footer.php"; ?>

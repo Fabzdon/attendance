@@ -6,7 +6,8 @@ require_once 'includes/auth_check.php';
 
 $results = $crud->getSpecialties();
 
-if (!isset($_GET['id'])) {
+if (!isset($_GET['id'])) 
+{
 
     include 'includes/errormessage.php';
     header("Location: viewrecords.php");

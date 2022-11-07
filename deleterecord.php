@@ -2,7 +2,8 @@
 $title = 'deleterecord';
 require_once "includes/header.php";
 require_once 'includes/auth_check.php';
-if(!$_GET['id']){
+if(!$_GET['id'])
+{
 
     include 'includes/errormessage.php';
     header("Location: viewrecords.php");
@@ -17,7 +18,8 @@ else
 
     $result = $crud->deleteAttendee($id);
     echo $result;
-    if($result){
+    if($result)
+    {
         header("Location: viewrecords.php");
     } 
     else

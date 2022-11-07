@@ -13,7 +13,8 @@ require_once 'sendemail.php';
 
 <?php 
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submit']))
+    {
       
       $fname = $_POST["firstname"];
       $lname = $_POST["lastname"];

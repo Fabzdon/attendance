@@ -56,13 +56,15 @@ class crud
 
   }
 
-  public function getAttendees(){
+  public function getAttendees()
+  {
     try{
     $sql = "SELECT * FROM `attendance` a inner join specialties s on a.specialty_id = s.specialty_id";
     $result = $this->database->query($sql);
     return $result;
   }
-  catch (PDOException $e){
+  catch (PDOException $e)
+  {
 
     echo $e->getMessage();
     return false;
@@ -72,7 +74,8 @@ class crud
 
 
   public function getSpecialties(){
-    try{
+    try
+    {
     $sql = "SELECT * FROM `specialties`";
     $result = $this->database->query($sql);
     return $result;
@@ -87,7 +90,8 @@ class crud
 
   public function getAttendeeDetails($id)
   {
-    try{
+    try
+    {
     $sql = "select * from attendance a inner join specialties s on a.specialty_id = s.specialty_id where id = :id";
     $stmt = $this->database->prepare($sql);
     $stmt->bindparam(':id',$id);
@@ -106,7 +110,8 @@ class crud
   public function deleteAttendee($id){
 
 
-    try{
+    try
+    {
 
     $sql = "delete from attendance where id = :id";
     $stmt = $this->database->prepare($sql);

@@ -3,7 +3,8 @@ $title = "User Login" ;
  require_once 'includes/header.php'; 
 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
     $username = strtolower(trim($_POST['username']));
     $password = $_POST['password'];
     $new_password = md5($password.$username);

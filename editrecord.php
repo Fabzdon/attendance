@@ -2,7 +2,8 @@
 require_once "includes/header.php";
 require_once 'includes/auth_check.php';
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']))
+{
 
     $id = $_POST["id"];
       
@@ -14,7 +15,8 @@ if(isset($_POST['submit'])){
     $specialty = $_POST["specialty"];
 
     $result = $crud->editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty);
-    if($result){
+    if($result)
+    {
         header("Location: viewrecords.php");
 
     }
