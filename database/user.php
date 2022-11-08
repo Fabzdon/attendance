@@ -22,7 +22,8 @@ class user
         if($result['num'] > 0){
             return false;
         }
-        else{
+        else
+        {
         $new_password = md5($password.$username);
         $sql = "INSERT INTO user (username,password) VALUES (:username, :password)";
         $statement = $this->database->prepare($sql);
@@ -49,7 +50,7 @@ class user
     }
 }
 
-public function getAttendeeDetails($username, $password)
+public function getUserDetails($username, $password)
   {
     try{
     $sql = "select * from user  where username = :username AND password = :password";

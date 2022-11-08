@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $password = $_POST['password'];
     $new_password = md5($password.$username);
 
-    $result = $user->getAttendeeDetails($username,$new_password);
+    $result = $user->getUserDetails($username,$new_password);
     if(!$result)
     {
 
@@ -22,7 +22,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         $_SESSION['username'] = $username;
         $_SESSION['userid'] = $result['id'];
         header("Location: viewrecords.php");
-
     }
 
 }
